@@ -29,6 +29,7 @@
                   └───────────────┘
 
 #Estrutura de pastas
+
 ground_effect_vehicle_sim/
 ├── 📁 core/
 │   ├── 🐍 simulation_orchestrator.py
