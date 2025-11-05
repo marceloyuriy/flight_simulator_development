@@ -8,6 +8,18 @@ import time
 import sys
 import os
 
+BACKEND = os.getenv("FLIGHTSIM_XPC_BACKEND", "auto")
+
+try:
+    if BACKEND == "mock":
+        from xpc_mock import XPlaneConnectMock as XPlaneConnect
+    else:
+        import xpc  # biblioteca oficial XPlaneConnect
+        XPlaneConnect = xpc.XPlaneConnect
+except Exception:
+    # fallback automático
+    from xpc_mock import XPlaneConnectMock as XPlaneConnect
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from core.message_bus import MessageBus
@@ -21,7 +33,7 @@ try:
 except ImportError:
     XPLANE_AVAILABLE = False
     print("⚠️  XPlaneConnect não disponível - conectando ao MOCK")
-    from sim_io.xplane_client import get_xplane_client
+    from xplane_local_test.xplane_client import get_xplane_client
 
 
 class XPlaneInterface:

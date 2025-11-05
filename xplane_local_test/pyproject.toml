@@ -1,0 +1,18 @@
+[project]
+name = "xpc-mock"
+version = "0.1.0"
+description = "Simulador leve compatível com a API do XPlaneConnect para testes locais"
+requires-python = ">=3.9"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# inclui o módulo solto na raiz
+py-modules = ["xplaneconnect"]
+
+[tool.setuptools.packages.find]
+# descobre automaticamente o pacote xplane_sim/
+where = ["."]
+include = ["xplane_sim*"]

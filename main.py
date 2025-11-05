@@ -12,7 +12,6 @@ from core.message_bus import MessageBus
 from core.simulation_orchestrator import SimulationOrchestrator
 from interfaces.xplane_interface import XPlaneInterface
 from dynamics.flight_dynamics import SimpleFlightDynamics
-from sim_io.xplane_backend import get_xpc
 
 def main():
     print("🚀 SIMULADOR DE VOO - DESENVOLVIMENTO")
