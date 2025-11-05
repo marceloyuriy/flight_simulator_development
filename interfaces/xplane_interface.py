@@ -20,7 +20,8 @@ try:
     print("✅ XPlaneConnect disponível - modo REAL ativado")
 except ImportError:
     XPLANE_AVAILABLE = False
-    print("⚠️  XPlaneConnect não disponível - usando MOCK")
+    print("⚠️  XPlaneConnect não disponível - conectando ao MOCK")
+    from sim_io.xplane_client import get_xplane_client
 
 
 class XPlaneInterface:
