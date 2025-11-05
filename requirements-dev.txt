@@ -1,0 +1,41 @@
+# =============================================
+# DEPENDÊNCIAS DE DESENVOLVIMENTO
+# =============================================
+
+# Todas as dependências principais
+-r requirements.txt
+
+# 🛠️ FERRAMENTAS DE DESENVOLVIMENTO
+# ==================================
+
+# Debugging avançado
+debugpy>=1.5.0
+
+# Testes avançados
+pytest-benchmark>=3.4.0
+pytest-mock>=3.7.0
+
+# Documentação
+sphinx>=4.0
+sphinx-rtd-theme>=1.0
+
+# Controle de qualidade de código
+pylint>=2.12.0
+bandit>=1.7.0
+safety>=1.10.0
+
+# Git hooks
+pre-commit>=2.15.0
+
+# Monitoramento de performance
+memory-profiler>=0.60
+line-profiler>=3.4.0
+
+# 🎯 DEPENDÊNCIAS PARA MODELOS ESPECÍFICOS
+# ========================================
+
+# Para modelos aerodinâmicos avançados
+aero-calc>=0.3.0
+
+# Para futura integração com FlightGear
+pyfg>=0.1.0

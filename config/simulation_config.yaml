@@ -1,0 +1,31 @@
+simulation:
+  frame_rate: 60
+  real_time: true
+  data_logging: true
+
+network:
+  message_bus:
+    protocol: udp
+    port: 12345
+    broadcast: true
+
+xplane:
+  host: 127.0.0.1
+  port: 49000
+  aircraft: Cessna_172SP
+
+aircraft:
+  model: cessna_172
+  initial_conditions:
+    latitude: 40.0
+    longitude: -75.0
+    altitude: 1000.0
+    heading: 0.0
+
+modules:
+  enabled:
+    - flight_dynamics
+    - aerodynamics
+    - propulsion
+    - xplane_interface
+    - data_recorder
